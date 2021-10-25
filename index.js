@@ -64,7 +64,8 @@ app.delete('/api/notes/:id', (re, res) => {
     res.status(204).json(notes);
 });
 
-const PORT = 3001;
+// eslint-disable-next-line no-undef
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log('Server running on port 3001');
 });
